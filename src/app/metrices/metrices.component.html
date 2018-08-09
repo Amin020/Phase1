@@ -9,6 +9,12 @@
   </div>
   
   <ul class="list-group">
-    <li class="list-group-item" *ngFor = "let metric of metrics">{{metric}}</li>
+    <li class="list-group-item"
+     draggable="true"
+     *ngFor = "let metric of metrics"
+     (dragstart)="drag($event, metric)"
+     [id]="metric.id">
+     {{metric.name}}
+    </li>
   </ul>
 </div>

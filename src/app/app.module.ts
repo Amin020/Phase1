@@ -4,18 +4,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardsComponent } from './cards/cards.component';
 import { MetricesComponent } from './metrices/metrices.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SelectedMetricsComponent } from './selected-metrics/selected-metrics.component';
+import { SelectedMetricsSelectionMenuComponent } from './selected-metrics-selection-menu/selected-metrics-selection-menu.component';
+import { SelectedMetricOptionsMenuComponent } from './selected-metric-options-menu/selected-metric-options-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent,
     MetricesComponent,
     TabsComponent,
-    NavBarComponent
+    NavBarComponent,
+    SelectedMetricsComponent,
+    SelectedMetricsSelectionMenuComponent,
+    SelectedMetricOptionsMenuComponent
   ],
   imports: [
     BrowserModule,

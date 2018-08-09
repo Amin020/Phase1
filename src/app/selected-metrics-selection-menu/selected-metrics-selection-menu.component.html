@@ -1,0 +1,26 @@
+<button mat-icon-button 
+  disableRipple
+  class="selection-icon" 
+  [matMenuTriggerFor]="menu" 
+  (click)="toggleMenu()">
+  Selection
+  <mat-icon *ngIf="!selectionExpanded">expand_more</mat-icon>
+  <mat-icon *ngIf="selectionExpanded">expand_less</mat-icon>
+</button>
+<mat-menu 
+  #menu="matMenu" 
+  yPosition="below" 
+  [overlapTrigger]="false">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voicemail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>

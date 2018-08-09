@@ -1,0 +1,92 @@
+
+.general-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 16px 0;
+}
+
+.container {
+    background-color: #F8F8F8;
+    padding: 20px;
+    margin: 0;
+}
+
+.left-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selection-icon mat-icon {
+    padding: 0;
+    margin: 0;
+}
+
+
+.selection {
+    margin-left: 9px;
+}
+
+.right-control {
+    text-align: center;
+}
+
+.mat-icon-button {
+    width: auto;
+    height: auto;
+    line-height: 0;
+}
+
+.selected-metric {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;     
+    padding: 8px 10px 8px 10px;   
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #ebebeb;
+    margin-bottom: 15px;
+}
+
+.metric-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;        
+}
+
+.metric-labeling {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 35px; 
+}
+
+.metric-labeling mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.metric-labeling p {
+    margin: 0;
+}
+
+.metric-labeling mat-icon{
+    margin-right: 20px; 
+}
+
+.delete mat-icon, .delete p {
+    color: red;
+}
+
+
+.remove-btn {
+    color: red; 
+}
