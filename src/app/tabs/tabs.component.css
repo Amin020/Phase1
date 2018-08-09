@@ -1,0 +1,4 @@
+.matTab {
+    display: flex;
+    flex-direction: row;
+}

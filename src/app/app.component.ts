@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'phase1';
+
+  openNav() {
+    const element = document.getElementById('NavBar');
+    element.style.display = 'block';
+  }
+
 }
