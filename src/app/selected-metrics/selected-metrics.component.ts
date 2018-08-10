@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 import { elevate } from './selected-metrics.animations';
+import { SelectedMetricsStore } from '../common/selected-metrics.store';
 
 
 @Component({
@@ -11,23 +11,12 @@ import { elevate } from './selected-metrics.animations';
 })
 export class SelectedMetricsComponent implements OnInit {
 
-  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-  @Output() dropped;
-  @Output() deleted;
-
   metrics: any[];
   hoveredId: number;
 
-  constructor() {
-    //variables intialization
-    this.dropped = new EventEmitter();
-    this.deleted = new EventEmitter();
+  constructor(private store: SelectedMetricsStore) {
     this.hoveredId = -1;
-    this.metrics = [
-      {id: 1, name: 'M1'},
-      {id: 2, name: 'M2'},
-      {id: 3, name: 'M3'}
-    ];
+    this.metrics = store.selectedMetrics;
   }
 
   ngOnInit() {
@@ -46,19 +35,14 @@ export class SelectedMetricsComponent implements OnInit {
   }
 
   drop($event) {
+    console.log('dropped');
     $event.preventDefault();
     let metric = JSON.parse($event.dataTransfer.getData('metric'));
-    this.dropped.emit(metric);
-    this.metrics.push(metric);
+    this.store.selectMetric(metric);
   }
 
   removeMetric(metric) {
-    console.log(metric);
-    let ind = this.metrics.findIndex(elem => {
-      return elem.id === metric.id;
-    });
-    this.metrics.splice(ind, 1);
-    this.deleted.emit(metric);
+    this.store.unselectMetric(metric);
   }
 
 }

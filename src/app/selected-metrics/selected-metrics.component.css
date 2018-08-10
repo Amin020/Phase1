@@ -13,6 +13,10 @@
     margin: 0;
 }
 
+.selected-metrics-container {
+    height: 100%;
+}
+
 .left-control {
     display: flex;
     flex-direction: row;

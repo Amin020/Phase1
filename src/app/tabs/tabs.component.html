@@ -4,14 +4,8 @@
   </mat-tab>
   <mat-tab label="Selected metrics">
     <div class = "matTab">
-      <app-metrices
-      [setMetric]="setMetric"
-      [deletedMetric]="deleteMetric">
-      </app-metrices>
-      <app-selected-metrics
-      (deleted)="onDeleted($event)"
-      (dropped)="onDropped($event)">
-    </app-selected-metrics>
+      <app-metrices></app-metrices>
+      <app-selected-metrics></app-selected-metrics>
     </div>
   </mat-tab>
 </mat-tab-group>
