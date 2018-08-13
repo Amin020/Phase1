@@ -5,59 +5,184 @@ import { Injectable } from '@angular/core';
 })
 export class SelectedMetricsStore {
 
-  metrics: any[];
+  metrics: any;
   selectedMetrics: any[];
 
   constructor() {
-    this.metrics = [
-      {id: 1, name: 'M1'}, 
-      {id: 3, name: 'M3'}, 
-      {id: 5, name: 'M5'},
-      {id: 6, name: 'M6'}, 
-      {id: 7, name: 'M7'}, 
-      {id: 8, name: 'M8'},
-      {id: 9, name: 'M9'}, 
-      {id: 10, name: 'M10'}, 
-      {id: 11, name: 'M11'},
-      {id: 12, name: 'M12'}, 
-      {id: 13, name: 'M13'}, 
-      {id: 14, name: 'M14'},
-      {id: 15, name: 'M15'}, 
-      {id: 16, name: 'M16'},
-      {id: 17, name: 'M17'}, 
-      {id: 18, name: 'M18'}, 
-      {id: 19, name: 'M19'},
-      {id: 20, name: 'M20'}, 
-      {id: 21, name: 'M21'}, 
-      {id: 22, name: 'M22'},
-      {id: 23, name: 'M23'}, 
-      {id: 24, name: 'M24'}, 
-      {id: 25, name: 'M25'},
-    ];
-    this.selectedMetrics = [{id: 2, name: 'M2'}, {id: 4, name: 'M4'}];
+    this.metrics = 
+    {
+    
+    "MetricsBycategory": {
+    
+    "category": [
+    
+    {
+    
+    "id": 1,
+    
+    "name": "Category #1",
+    
+    "description": 
+    "description of category 1",
+    
+    "metric": [
+    
+    {
+    
+    "id": 1,
+    
+    "name": "service name",
+    
+    "description": 
+    "get service by names"
+    
+    },
+    
+    {
+    
+    "id": 2,
+    
+    "name": "metric 2",
+    
+    "description": 
+    "description of metric 2"
+    
+    },
+    
+    {
+    
+    "id": 3,
+    
+    "name": "metric 3",
+    
+    "description": 
+    "description of metric 3"
+    
+    }
+    
+    ]
+    
+    },
+    
+    {
+    
+    "id": 2,
+    
+    "name": "Category #2",
+    
+    "description": 
+    "description of category 2",
+    
+    "metric": [
+    
+    {
+    
+    "id": 4,
+    
+    "name": "metric 4",
+    
+    "description": 
+    "description of metric 4"
+    
+    },
+    
+    {
+    
+    "id": 5,
+    
+    "name": "metric 5",
+    
+    "description": 
+    "description of metric 5"
+    
+    },
+    
+    {
+    
+    "id": 6,
+    
+    "name": "metric 6",
+    
+    "description": 
+    "description of metric 6"
+    
+    }
+    
+    ]
+    
+    },
+    {
+    
+      "id": 3,
+      
+      "name": "Category #3",
+      
+      "description": 
+      "description of category 3",
+      
+      "metric": [
+      
+      {
+      
+      "id": 4,
+      
+      "name": "metric 7",
+      
+      "description": 
+      "description of metric 7"
+      
+      },
+      
+      {
+      
+      "id": 5,
+      
+      "name": "metric 8",
+      
+      "description": 
+      "description of metric 8"
+      
+      },
+      
+      {
+      
+      "id": 6,
+      
+      "name": "metric 9",
+      
+      "description": 
+      "description of metric 9"
+      
+      }
+      
+      ]
+      
+      }
+    ]
+    
+    }
+    
+    }
+    this.selectedMetrics = [];
   }
 
   selectMetric(metric) {
-    let ind = this.metrics.findIndex(elem => {
-      return elem.id == metric.id;
-    });
-    this.selectedMetrics.push(this.metrics[ind]);
-    this.metrics.splice(ind, 1);
-  }
-
-  unselectMetric(metric) {
+    console.log(metric);
     let ind = this.selectedMetrics.findIndex(elem => {
       return elem.id == metric.id;
     });
-    this.metrics.push(this.selectedMetrics[ind]);
-    this.selectedMetrics.splice(ind, 1);
+    if(ind == -1)
+      this.selectedMetrics.push(metric);
+  }
+
+  unselectMetric(metric) {
+      let ind = this.selectedMetrics.findIndex(elem => {
+        return elem.id == metric.id;
+      });
+      this.selectedMetrics.splice(ind, 1);
   }
 
   removeAllMetrics() {
-    let i = 0;
-    for(i; i < this.selectedMetrics.length; i++) {
-      this.metrics.push(this.selectedMetrics[i]);
-    }
     this.selectedMetrics.splice(0, this.selectedMetrics.length);
   }
   

@@ -1,4 +1,4 @@
-<Div class="container"  (dragover)="allowDrop($event)" (drop)="drop($event)">
+<Div class="container" (dragover)="allowDrop($event)" (drop)="drop($event)">
   <div class="content">
     <p class="header">Selected metrics</p>
     <div class="general-control">
@@ -37,13 +37,15 @@
             <selected-metric-options-menu></selected-metric-options-menu>
         </div>
       </mat-card>
-      <button mat-raised-button primary
-        class="show-sample"
-        [routerLink]="['/dashboard', 'raw']" 
-        [queryParams]="{metrics: metrics}">
-        Show data sample
-        <mat-icon>arrow_forward</mat-icon>
-      </button>
     </div>
+  </div>
+  <div class="show-sample-div">
+    <button mat-raised-button primary
+          class="show-sample"
+          [routerLink]="['/dashboard', 'raw']" 
+          [queryParams]="{metrics: metrics}">
+          Show data sample
+          <mat-icon>arrow_forward</mat-icon>
+    </button>
   </div>
 </Div>

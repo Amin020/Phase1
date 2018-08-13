@@ -2,6 +2,7 @@ import { MaterialModule } from './common/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { SelectedMetricsSelectionMenuComponent } from './selected-metrics-select
 import { SelectedMetricOptionsMenuComponent } from './selected-metric-options-menu/selected-metric-options-menu.component';
 import { SelectedMetricsStore } from './common/selected-metrics.store';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { CategoriesListComponent } from './categories-list/categories-list.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     SelectedMetricsComponent,
     SelectedMetricsSelectionMenuComponent,
     SelectedMetricOptionsMenuComponent,
-    SideBarComponent
+    SideBarComponent,
+    CategoriesListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     RouterModule.forRoot([
       
     ])

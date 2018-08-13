@@ -37,7 +37,6 @@ export class SelectedMetricsComponent implements OnInit {
   }
 
   drop($event) {
-    console.log('dropped');
     $event.preventDefault();
     let metric = JSON.parse($event.dataTransfer.getData('metric'));
     this.store.selectMetric(metric);

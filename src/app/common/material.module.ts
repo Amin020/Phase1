@@ -7,6 +7,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -18,7 +23,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatInputModule,
     MatButtonModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatTooltipModule
+
   ],
   declarations: []
 })

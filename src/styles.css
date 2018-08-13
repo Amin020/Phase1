@@ -21,3 +21,11 @@ li {
 .mat-drawer-backdrop.mat-drawer-shown {
     background-color: rgba(0,0,0,.1) !important;
 }
+
+/* .example-container[_ngcontent-c4]{
+    height: 100vh !important;
+}
+
+mat-card, matTab ng-star-inserted, app-side-bar {
+    min-height: 100vh !important;
+} */

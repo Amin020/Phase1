@@ -23,3 +23,24 @@
     padding: 20px;
     position: fixed;
 }
+
+h2 {
+    font-family: Poppins Latin;
+    font-size: 22px;
+    font-weight: 300;
+    color: #717171;
+}
+
+h3 {
+    font-family: Poppins Latin;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color: #0049b0;
+}
+
+h4 {
+    font-family: Poppins Latin;
+    font-size: 14px;
+    font-weight: 600;
+}
