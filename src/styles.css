@@ -5,7 +5,19 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
+html, body {
+    height: 100%;
+}
+
 li {
     list-style-type: none;
     padding-bottom: 25px;
+}
+
+.mat-drawer-backdrop {
+    position: fixed !important;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba(0,0,0,.1) !important;
 }

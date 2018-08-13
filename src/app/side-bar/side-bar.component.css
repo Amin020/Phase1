@@ -1,0 +1,25 @@
+.sideBarContainer {
+    padding: 20px;
+}
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.faCloseContainer {
+    align-self: center;
+    padding: 5px;
+}
+
+.faCloseContainer:hover {
+    background-color: #DDD;
+}
+
+.example-container {
+    height: 100%;
+}
+
+.example-sidenav {
+    padding: 20px;
+    position: fixed;
+}

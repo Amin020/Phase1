@@ -1,4 +1,13 @@
 
+.selected-metrics-count {
+    font-family: Poppins Latin;
+    font-size: 16px;
+    height: 16px;
+    font-weight: 500;
+    color: #717171;
+}
+
+
 .general-control {
     display: flex;
     flex-direction: row;
@@ -9,13 +18,22 @@
 
 .container {
     background-color: #F8F8F8;
-    padding: 20px;
-    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-content: space-between;
+    padding: 19px 19px 11px 19px;
+    margin: 0; 
 }
 
 .selected-metrics-container {
-    height: 100%;
-}
+    height: auto;
+    min-height: 100%;
+} 
 
 .left-control {
     display: flex;
@@ -31,10 +49,11 @@
 
 
 .selection {
-    margin-left: 9px;
+    width: 5%;
 }
 
 .right-control {
+    color: #5d6c85;
     text-align: center;
 }
 
@@ -49,11 +68,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;     
-    padding: 8px 10px 8px 10px;   
+    height: 40px;
+    padding: 9px 9px 9px 15px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #ebebeb;
     margin-bottom: 15px;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:95%;
 }
 
 .metric-control {
@@ -69,7 +97,10 @@
     justify-content: space-around;
     align-items: center;
     margin-left: auto;
-    margin-right: 35px; 
+    margin-right: 35px;     
+    color: #717171;
+    font-family: Poppins Latin;
+    font-weight: normal;
 }
 
 .metric-labeling mat-icon {
@@ -80,17 +111,52 @@
 
 .metric-labeling p {
     margin: 0;
-}
+}   
 
 .metric-labeling mat-icon{
     margin-right: 20px; 
 }
 
 .delete mat-icon, .delete p {
-    color: red;
+    color: #ff2c00;
+    font-weight: normal;
 }
 
 
 .remove-btn {
     color: red; 
+}
+
+.name {
+    font-family: Poppins Latin;
+    color: #5d6c85;
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.show-sample {
+    position: fixed;
+    bottom: 13px; 
+    right: 23px;
+    height: 42px;
+    border-radius: 24px;
+    font-family: Poppins Latin;
+    color: white;
+    background-color: #0049b0;
+}
+
+.show-sample mat-icon {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    margin-left: 6px;
+}
+
+.header {
+    font-size: 20px;
+    font-family: Poppins Latin;
+    color: #162a4e;
+    font-weight: normal;
 }

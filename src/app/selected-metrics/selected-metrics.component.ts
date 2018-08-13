@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { elevate } from './selected-metrics.animations';
 import { SelectedMetricsStore } from '../common/selected-metrics.store';
 
@@ -11,12 +11,14 @@ import { SelectedMetricsStore } from '../common/selected-metrics.store';
 })
 export class SelectedMetricsComponent implements OnInit {
 
+  @Output() metricClicked: EventEmitter<any>;
   metrics: any[];
   hoveredId: number;
 
   constructor(private store: SelectedMetricsStore) {
     this.hoveredId = -1;
     this.metrics = store.selectedMetrics;
+    this.metricClicked = new EventEmitter();
   }
 
   ngOnInit() {
@@ -45,4 +47,12 @@ export class SelectedMetricsComponent implements OnInit {
     this.store.unselectMetric(metric);
   }
 
+  removeAll() {
+    this.store.removeAllMetrics();
+  }
+
+  openSideBar(metric) {
+    this.metricClicked.emit(metric);    
+  }
+  
 }

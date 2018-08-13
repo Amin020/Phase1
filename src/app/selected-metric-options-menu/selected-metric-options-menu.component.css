@@ -2,4 +2,7 @@
 .selection-icon {    
     color: blue;
     margin: 0 0 0 24px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
 }

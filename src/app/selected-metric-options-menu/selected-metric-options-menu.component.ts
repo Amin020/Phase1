@@ -10,13 +10,17 @@ export class SelectedMetricOptionsMenuComponent implements OnInit {
 
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
-  constructor() { }
+  private items;
 
-  ngOnInit() {
+  constructor() {
+    this.items = [
+      {id: 1, name: 'Option 1', iconName: 'dialpad'},
+      {id: 2, name: 'Option 2', iconName: 'dialpad'},
+      {id: 3, name: 'Option 3', iconName: 'dialpad'}
+    ];
   }
 
-  toggleMenu(): void {
-    this.trigger.openMenu();
+  ngOnInit() {
   }
 
 }
